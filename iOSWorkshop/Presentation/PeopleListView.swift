@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  PeopleListView.swift
 //  iOSWorkshop
 //
 //  Created by Mattei, Marco-MIGROSONLINE on 12.12.22.

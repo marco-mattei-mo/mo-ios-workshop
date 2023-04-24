@@ -23,7 +23,6 @@
 		F1AB3F312947304100502E2B /* PeopleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB3F302947304100502E2B /* PeopleListView.swift */; };
 		F1AB3F332947304200502E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1AB3F322947304200502E2B /* Assets.xcassets */; };
 		F1AB3F362947304200502E2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1AB3F352947304200502E2B /* Preview Assets.xcassets */; };
-		F1AB3F402947304300502E2B /* iOSWorkshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB3F3F2947304300502E2B /* iOSWorkshopTests.swift */; };
 		F1AB3F4A2947304300502E2B /* iOSWorkshopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB3F492947304300502E2B /* iOSWorkshopUITests.swift */; };
 		F1AB3F4C2947304300502E2B /* iOSWorkshopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB3F4B2947304300502E2B /* iOSWorkshopUITestsLaunchTests.swift */; };
 		F1AB3F5C294733E800502E2B /* PeopleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB3F5B294733E800502E2B /* PeopleRepository.swift */; };
@@ -73,7 +72,6 @@
 		F1AB3F322947304200502E2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1AB3F352947304200502E2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F1AB3F3B2947304300502E2B /* iOSWorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSWorkshopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1AB3F3F2947304300502E2B /* iOSWorkshopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSWorkshopTests.swift; sourceTree = "<group>"; };
 		F1AB3F452947304300502E2B /* iOSWorkshopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSWorkshopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1AB3F492947304300502E2B /* iOSWorkshopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSWorkshopUITests.swift; sourceTree = "<group>"; };
 		F1AB3F4B2947304300502E2B /* iOSWorkshopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSWorkshopUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -200,7 +198,6 @@
 				F106E86E29D1C7E300E6AF82 /* Data */,
 				F106E86F29D1C7E900E6AF82 /* Domain */,
 				F106E87029D1C7EE00E6AF82 /* Presentation */,
-				F1AB3F3F2947304300502E2B /* iOSWorkshopTests.swift */,
 				F106E87C29D1EDA300E6AF82 /* people.json */,
 			);
 			path = iOSWorkshopTests;
@@ -484,7 +481,6 @@
 			files = (
 				F124D4B429D3434800DC1FB0 /* DefaultPeopleRepositoryTest.swift in Sources */,
 				F106E87B29D1EABB00E6AF82 /* PeopleConvertersTest.swift in Sources */,
-				F1AB3F402947304300502E2B /* iOSWorkshopTests.swift in Sources */,
 				F106E87929D1E61700E6AF82 /* FindPeopleListUseCaseTest.swift in Sources */,
 				DD7CA046A202666110C8C9E5 /* iOSWorkshopTests-iOSWorkshopMocks.generated.swift in Sources */,
 				F106E88129D1F1C100E6AF82 /* NetworkPeopleDataSourceTest.swift in Sources */,
@@ -646,6 +642,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -674,6 +671,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
