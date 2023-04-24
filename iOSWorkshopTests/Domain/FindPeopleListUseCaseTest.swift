@@ -11,6 +11,7 @@ import Cuckoo
 import Fakery
 import XCTest
 
+//TODO: Part 9 - Write FindPeopleListUseCase unit tests
 class FindPeopleListUseCaseTest: XCTestCase {
 
     private var repository = MockPeopleRepository()
@@ -36,37 +37,19 @@ class FindPeopleListUseCaseTest: XCTestCase {
 
     func testFindPeopleListUseCaseSuccess() async {
         // Given
-        let testPeopleList = [generatePeople(), generatePeople()]
-        stub(repository) { stub in
-            when(stub.findPeopleList()).thenReturn(testPeopleList)
-        }
-
+        
         // When
-        let peopleList = try? await useCase.execute()
-
+        
         // Then
-        verify(repository).findPeopleList()
-        XCTAssertNotNil(peopleList)
-        XCTAssertTrue(peopleList!.elementsEqual(testPeopleList))
+
     }
 
     func testFindPeopleListUseCaseFailure() async {
         // Given
-        stub(repository) { stub in
-            when(stub.findPeopleList()).thenThrow(PeopleError.unknown)
-        }
-
+        
         // When
-        var sutError: Error?
-        do {
-            _ = try await useCase.execute()
-        } catch {
-            sutError = error
-        }
-
+        
         // Then
-        verify(repository).findPeopleList()
-        XCTAssertNotNil(sutError)
-        XCTAssertEqual(sutError as? PeopleError, .unknown)
+
     }
 }

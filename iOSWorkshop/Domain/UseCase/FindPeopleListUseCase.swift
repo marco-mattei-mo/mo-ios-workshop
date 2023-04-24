@@ -6,6 +6,6 @@ class FindPeopleListUseCase {
     }
 
     func execute() async throws -> [People] {
-        try await peopleRepository.findPeopleList()
+        //TODO: Part 4 - Call the repository function to find the people list and return its value
     }
 }
