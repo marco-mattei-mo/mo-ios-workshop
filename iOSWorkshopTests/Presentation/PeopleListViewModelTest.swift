@@ -11,6 +11,7 @@ import Cuckoo
 import Fakery
 import XCTest
 
+//TODO: Part 9 - Write PeopleListViewModel unit tests
 class PeopleListViewModelTest: XCTestCase {
 
     private var findPeopleListUseCase: MockFindPeopleListUseCase!
@@ -36,52 +37,28 @@ class PeopleListViewModelTest: XCTestCase {
 
     func testLoadPeopleListSuccess() async {
         // Given
-        let peopleList = [generatePeople()]
-        let viewModel = PeopleListViewModel(findPeopleListUseCase: findPeopleListUseCase)
-        stub(findPeopleListUseCase) { stub in
-            when(stub.execute()).thenReturn(peopleList)
-        }
-
+        
         // When
-        await viewModel.loadPeopleList()
-
+        
         // Then
-        verify(findPeopleListUseCase).execute()
-        XCTAssertEqual(viewModel.people.count, 1)
-        XCTAssertTrue(viewModel.people.elementsEqual(peopleList))
     }
 
     func testLoadPeopleListSuccessSortsBySelectedSorting() async {
         // Given
-        let peopleList = [generatePeople(name: "Obi-wan"), generatePeople(name: "Anakin")]
-        let viewModel = PeopleListViewModel(findPeopleListUseCase: findPeopleListUseCase)
-        stub(findPeopleListUseCase) { stub in
-            when(stub.execute()).thenReturn(peopleList)
-        }
-        viewModel.sortBy = .name
-
+        
         // When
-        await viewModel.loadPeopleList()
-
+        
         // Then
-        verify(findPeopleListUseCase).execute()
-        XCTAssertEqual(viewModel.people.count, 2)
-        XCTAssertTrue(viewModel.people.elementsEqual([peopleList[1], peopleList[0]]))
+
     }
 
     func testLoadPeopleListError() async {
         // Given
-        let viewModel = PeopleListViewModel(findPeopleListUseCase: findPeopleListUseCase)
-        stub(findPeopleListUseCase) { stub in
-            when(stub.execute()).thenThrow(PeopleError.unknown)
-        }
-
+        
         // When
-        await viewModel.loadPeopleList()
-
+        
         // Then
-        verify(findPeopleListUseCase).execute()
-        XCTAssertEqual(viewModel.loadError, String(describing: PeopleError.unknown))
+
     }
 
     func testInitSetsUpTheStoreBySubscriber() async {

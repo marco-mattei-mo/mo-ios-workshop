@@ -33,22 +33,15 @@ class PeopleListViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     
+    //TODO: Part 5 - Load the people list and handle the error by assigning it to the loadError variable
+    // ⚠️ Do not forget to sort the people list by the currently selected sorting value once the list is loaded.
     @MainActor func loadPeopleList() async {
-        do {
-            people = try await findPeopleListUseCase.execute()
-            sortPeopleListBy(selectedSorting: sortBy)
-        } catch {
-            loadError = String(describing: error)
-        }
+
     }
     
+    //TODO: Part 5 - Sort the people list according to the selectedSorting value
     private func sortPeopleListBy(selectedSorting: SortingOption) {
-        switch selectedSorting {
-        case .name:
-            self.people.sort(by: { $0.name < $1.name })
-        case .height:
-            self.people.sort(by: { $0.height < $1.height })
-        }
+
     }
     
 }
