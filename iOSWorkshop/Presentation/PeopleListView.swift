@@ -14,9 +14,17 @@ struct PeopleListView: View {
     var body: some View {
         NavigationView {
             if let error = viewModel.loadError {
-                // TODO: Part 6 - If there is an error, display the error and below it, a button that allows to try again
+                //  Part 6 - If there is an error, display the error and below it, a button that allows to try again
+                VStack {
+                    Text(error)
+                    Button("Try again") {
+                        Task {
+                            await viewModel.loadPeopleList()
+                        }
+                    }
+                }
             } else {
-                // TODO: Part 6
+                // Part 6
                 /*
                  Display a list of people that matches the design provided
                  Hints on elements to use:
@@ -34,7 +42,34 @@ struct PeopleListView: View {
                  For the toolbar item, we will do it together 🙂
                  */
                 
-                //TODO: Part 7 - When clicking on an item on the list, navigate to the "PeopleDetailView" of that people
+                List(viewModel.people, id: \.name) { people in
+                    //TODO: Part 7 - When clicking on an item on the list, navigate to the "PeopleDetailView" of that people
+                    
+                    VStack(alignment: .leading) {
+                        Text(people.name)
+                        Text(people.birthYear)
+                    }
+                }
+                .toolbar {
+                    ToolbarItem {
+                        Picker("Filter", selection: $viewModel.sortBy) {
+                            ForEach(PeopleListViewModel.SortingOption.allCases, id: \.self) { filterOption in
+                                Text(filterOption.rawValue).tag(filterOption)
+                            }
+                        }
+                    }
+                }
+                .onAppear {
+                    Task {
+                        if firstAppear {
+                            await viewModel.loadPeopleList()
+                            firstAppear = false
+                        }
+                    }
+                }.refreshable {
+                    await viewModel.loadPeopleList()
+                }
+                .navigationTitle("Star Wars People")
             }
         }
     }
