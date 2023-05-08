@@ -11,7 +11,7 @@ import SwiftUI
 struct iOSWorkshopApp: App {
     var body: some Scene {
         WindowGroup {
-            PeopleListView(viewModel: PeopleDIContainer.makeFakePeopleListViewModel())
+            PeopleListView(viewModel: PeopleDIContainer.makePeopleListViewModel())
         }
     }
 }

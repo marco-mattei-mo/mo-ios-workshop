@@ -43,11 +43,15 @@ struct PeopleListView: View {
                  */
                 
                 List(viewModel.people, id: \.name) { people in
-                    //TODO: Part 7 - When clicking on an item on the list, navigate to the "PeopleDetailView" of that people
+                    // Part 7 - When clicking on an item on the list, navigate to the "PeopleDetailView" of that people
                     
-                    VStack(alignment: .leading) {
-                        Text(people.name)
-                        Text(people.birthYear)
+                    NavigationLink {
+                        PeopleDetailView(viewModel: people)
+                    } label: {
+                        VStack(alignment: .leading) {
+                            Text(people.name)
+                            Text(people.birthYear)
+                        }
                     }
                 }
                 .toolbar {
