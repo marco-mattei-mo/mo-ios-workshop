@@ -7,22 +7,22 @@
 
 @testable import iOSWorkshop
 import Combine
+import Cuckoo
 import Fakery
-import Mockingbird
 import XCTest
 
 class FindPeopleListUseCaseTest: XCTestCase {
-    
-    private var repository: PeopleRepositoryMock!
+
+    private var repository = MockPeopleRepository()
     private var useCase: FindPeopleListUseCase!
     private var faker = Faker()
-    
+
     override func setUp() {
         super.setUp()
-        repository = mock(PeopleRepository.self)
+        reset(repository)
         useCase = FindPeopleListUseCase(peopleRepository: repository)
     }
-    
+
     private func generatePeople() -> People {
         People(name: faker.name.name(),
                height: faker.number.randomInt(min: 150, max: 210),
@@ -33,25 +33,29 @@ class FindPeopleListUseCaseTest: XCTestCase {
                birthYear: "\(faker.number.randomInt(min: 0, max: 1000))BBY",
                gender: faker.gender.type())
     }
-    
+
     func testFindPeopleListUseCaseSuccess() async {
         // Given
         let testPeopleList = [generatePeople(), generatePeople()]
-        given(await repository.findPeopleList()).willReturn(testPeopleList)
-        
+        stub(repository) { stub in
+            when(stub.findPeopleList()).thenReturn(testPeopleList)
+        }
+
         // When
         let peopleList = try? await useCase.execute()
-        
+
         // Then
-        verify(await repository.findPeopleList()).wasCalled(once)
+        verify(repository).findPeopleList()
         XCTAssertNotNil(peopleList)
         XCTAssertTrue(peopleList!.elementsEqual(testPeopleList))
     }
-    
+
     func testFindPeopleListUseCaseFailure() async {
         // Given
-        givenSwift(await repository.findPeopleList()).will { throw PeopleError.unknown }
-        
+        stub(repository) { stub in
+            when(stub.findPeopleList()).thenThrow(PeopleError.unknown)
+        }
+
         // When
         var sutError: Error?
         do {
@@ -59,9 +63,9 @@ class FindPeopleListUseCaseTest: XCTestCase {
         } catch {
             sutError = error
         }
-        
+
         // Then
-        verify(await repository.findPeopleList()).wasCalled(once)
+        verify(repository).findPeopleList()
         XCTAssertNotNil(sutError)
         XCTAssertEqual(sutError as? PeopleError, .unknown)
     }

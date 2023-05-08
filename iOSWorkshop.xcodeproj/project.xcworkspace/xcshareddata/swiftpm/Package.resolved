@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "cuckoo",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Brightify/Cuckoo.git",
+      "state" : {
+        "revision" : "475322e609d009c284464c886ca08cfe421137a9",
+        "version" : "1.10.3"
+      }
+    },
+    {
       "identity" : "fakery",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vadymmarkov/Fakery.git",
@@ -16,15 +25,6 @@
       "state" : {
         "revision" : "4384e015cae4916a6828252467a4437173c7ae17",
         "version" : "3.0.1"
-      }
-    },
-    {
-      "identity" : "mockingbird",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/birdrides/mockingbird",
-      "state" : {
-        "revision" : "6e0d473df6b975719e145f6aebf90990c634700e",
-        "version" : "0.20.0"
       }
     }
   ],

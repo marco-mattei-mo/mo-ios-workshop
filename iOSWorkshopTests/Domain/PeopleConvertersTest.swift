@@ -8,7 +8,6 @@
 @testable import iOSWorkshop
 import Combine
 import Fakery
-import Mockingbird
 import XCTest
 
 class PeopleConvertersTest: XCTestCase {

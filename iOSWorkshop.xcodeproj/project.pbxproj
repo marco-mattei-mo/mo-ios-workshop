@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DD7CA046A202666110C8C9E5 /* iOSWorkshopTests-iOSWorkshopMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C9A3218B0849E20C6885C /* iOSWorkshopTests-iOSWorkshopMocks.generated.swift */; };
-		F106E87329D1C84B00E6AF82 /* Mockingbird in Frameworks */ = {isa = PBXBuildFile; productRef = F106E87229D1C84B00E6AF82 /* Mockingbird */; };
 		F106E87529D1CE0A00E6AF82 /* PeopleListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F106E87429D1CE0A00E6AF82 /* PeopleListViewModelTest.swift */; };
 		F106E87729D1D88700E6AF82 /* PeopleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F106E87629D1D88700E6AF82 /* PeopleError.swift */; };
 		F106E87929D1E61700E6AF82 /* FindPeopleListUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F106E87829D1E61700E6AF82 /* FindPeopleListUseCaseTest.swift */; };
@@ -18,6 +16,8 @@
 		F106E88129D1F1C100E6AF82 /* NetworkPeopleDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F106E88029D1F1C100E6AF82 /* NetworkPeopleDataSourceTest.swift */; };
 		F106E88429D1F41A00E6AF82 /* Mocker in Frameworks */ = {isa = PBXBuildFile; productRef = F106E88329D1F41A00E6AF82 /* Mocker */; };
 		F124D4B429D3434800DC1FB0 /* DefaultPeopleRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F124D4B329D3434800DC1FB0 /* DefaultPeopleRepositoryTest.swift */; };
+		F15642072A08F6DA003C24CD /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = F15642062A08F6DA003C24CD /* Cuckoo */; };
+		F156420A2A08F853003C24CD /* Mocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15642092A08F853003C24CD /* Mocks.generated.swift */; };
 		F165D3D029AFA3EC00FC739B /* PeopleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165D3CF29AFA3EC00FC739B /* PeopleDetailView.swift */; };
 		F1AB3F2F2947304100502E2B /* iOSWorkshopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB3F2E2947304100502E2B /* iOSWorkshopApp.swift */; };
 		F1AB3F312947304100502E2B /* PeopleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB3F302947304100502E2B /* PeopleListView.swift */; };
@@ -56,7 +56,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		192C9A3218B0849E20C6885C /* iOSWorkshopTests-iOSWorkshopMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "iOSWorkshopTests-iOSWorkshopMocks.generated.swift"; path = "MockingbirdMocks/iOSWorkshopTests-iOSWorkshopMocks.generated.swift"; sourceTree = "<group>"; };
 		F106E87429D1CE0A00E6AF82 /* PeopleListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListViewModelTest.swift; sourceTree = "<group>"; };
 		F106E87629D1D88700E6AF82 /* PeopleError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleError.swift; sourceTree = "<group>"; };
 		F106E87829D1E61700E6AF82 /* FindPeopleListUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPeopleListUseCaseTest.swift; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		F106E87E29D1EDD800E6AF82 /* PeopleListResultDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListResultDTO.swift; sourceTree = "<group>"; };
 		F106E88029D1F1C100E6AF82 /* NetworkPeopleDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPeopleDataSourceTest.swift; sourceTree = "<group>"; };
 		F124D4B329D3434800DC1FB0 /* DefaultPeopleRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPeopleRepositoryTest.swift; sourceTree = "<group>"; };
+		F15642092A08F853003C24CD /* Mocks.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.generated.swift; sourceTree = "<group>"; };
 		F165D3CF29AFA3EC00FC739B /* PeopleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailView.swift; sourceTree = "<group>"; };
 		F1AB3F2B2947304100502E2B /* iOSWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1AB3F2E2947304100502E2B /* iOSWorkshopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSWorkshopApp.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F106E87329D1C84B00E6AF82 /* Mockingbird in Frameworks */,
+				F15642072A08F6DA003C24CD /* Cuckoo in Frameworks */,
 				F106E88429D1F41A00E6AF82 /* Mocker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,14 +115,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		268A3E53135CF82E6EF145B4 /* Generated Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				192C9A3218B0849E20C6885C /* iOSWorkshopTests-iOSWorkshopMocks.generated.swift */,
-			);
-			name = "Generated Mocks";
-			sourceTree = "<group>";
-		};
 		F106E86E29D1C7E300E6AF82 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,14 +141,21 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		F15642082A08F72F003C24CD /* Cuckoo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cuckoo;
+			sourceTree = "<group>";
+		};
 		F1AB3F222947304000502E2B = {
 			isa = PBXGroup;
 			children = (
+				F15642082A08F72F003C24CD /* Cuckoo */,
 				F1AB3F2D2947304100502E2B /* iOSWorkshop */,
 				F1AB3F3E2947304300502E2B /* iOSWorkshopTests */,
 				F1AB3F482947304300502E2B /* iOSWorkshopUITests */,
 				F1AB3F2C2947304100502E2B /* Products */,
-				268A3E53135CF82E6EF145B4 /* Generated Mocks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,6 +194,7 @@
 		F1AB3F3E2947304300502E2B /* iOSWorkshopTests */ = {
 			isa = PBXGroup;
 			children = (
+				F15642092A08F853003C24CD /* Mocks.generated.swift */,
 				F106E86E29D1C7E300E6AF82 /* Data */,
 				F106E86F29D1C7E900E6AF82 /* Domain */,
 				F106E87029D1C7EE00E6AF82 /* Presentation */,
@@ -321,7 +321,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1AB3F522947304300502E2B /* Build configuration list for PBXNativeTarget "iOSWorkshopTests" */;
 			buildPhases = (
-				5243FCDE6D72D47868D8EBB0 /* Generate Mockingbird Mocks */,
+				5243FCDE6D72D47868D8EBB0 /* Generate Cuckoo Mocks */,
 				F1AB3F372947304300502E2B /* Sources */,
 				F1AB3F382947304300502E2B /* Frameworks */,
 				F1AB3F392947304300502E2B /* Resources */,
@@ -333,8 +333,8 @@
 			);
 			name = iOSWorkshopTests;
 			packageProductDependencies = (
-				F106E87229D1C84B00E6AF82 /* Mockingbird */,
 				F106E88329D1F41A00E6AF82 /* Mocker */,
+				F15642062A08F6DA003C24CD /* Cuckoo */,
 			);
 			productName = iOSWorkshopTests;
 			productReference = F1AB3F3B2947304300502E2B /* iOSWorkshopTests.xctest */;
@@ -392,8 +392,8 @@
 			mainGroup = F1AB3F222947304000502E2B;
 			packageReferences = (
 				F1AB3F7229473CE400502E2B /* XCRemoteSwiftPackageReference "Fakery" */,
-				F106E87129D1C84B00E6AF82 /* XCRemoteSwiftPackageReference "mockingbird" */,
 				F106E88229D1F41A00E6AF82 /* XCRemoteSwiftPackageReference "Mocker" */,
+				F15642052A08F6DA003C24CD /* XCRemoteSwiftPackageReference "Cuckoo" */,
 			);
 			productRefGroup = F1AB3F2C2947304100502E2B /* Products */;
 			projectDirPath = "";
@@ -434,7 +434,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5243FCDE6D72D47868D8EBB0 /* Generate Mockingbird Mocks */ = {
+		5243FCDE6D72D47868D8EBB0 /* Generate Cuckoo Mocks */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -442,13 +442,13 @@
 			);
 			inputPaths = (
 			);
-			name = "Generate Mockingbird Mocks";
+			name = "Generate Cuckoo Mocks";
 			outputPaths = (
 				"$(SRCROOT)/MockingbirdMocks/iOSWorkshopTests-iOSWorkshopMocks.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -eu\n\n# Prevent Xcode 13 from running this script while indexing.\n[[ \"${ACTION}\" == \"indexbuild\" ]] && exit 0\n\n# Infer the derived data location from the build environment.\n[[ -z \"${DERIVED_DATA+x}\" ]] && DERIVED_DATA=\"$(echo \"${BUILD_ROOT}\" | sed -n 's|\\(.*\\)/Build/.*|\\1|p')\"\n\n\"${DERIVED_DATA}/SourcePackages/checkouts/mockingbird/mockingbird\" generate --targets \"iOSWorkshop\" --outputs \"${SRCROOT}/MockingbirdMocks/iOSWorkshopTests-iOSWorkshopMocks.generated.swift\"\n";
+			shellScript = "if [ $ACTION == \"indexbuild\" ]; then\n  echo \"Not running Cuckoo generator during indexing.\"\n  exit 0\nfi\n\n# Skip for preview builds\nif [ \"${ENABLE_PREVIEWS}\" = \"YES\" ]; then\n  echo \"Not running Cuckoo generator during preview builds.\"\n  exit 0\nfi\n\n# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/Mocks.generated.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${PROJECT_DIR}/iOSWorkshop/Data/DataSource/PeopleDataSource.swift\" \\\n\"${PROJECT_DIR}/iOSWorkshop/Domain/Infrastructure/PeopleRepository.swift\" \\\n\"${PROJECT_DIR}/iOSWorkshop/Domain/UseCase/FindPeopleListUseCase.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `Mocks.generated.swift` and drag it into your Xcode test target group.\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -482,8 +482,8 @@
 				F124D4B429D3434800DC1FB0 /* DefaultPeopleRepositoryTest.swift in Sources */,
 				F106E87B29D1EABB00E6AF82 /* PeopleConvertersTest.swift in Sources */,
 				F106E87929D1E61700E6AF82 /* FindPeopleListUseCaseTest.swift in Sources */,
-				DD7CA046A202666110C8C9E5 /* iOSWorkshopTests-iOSWorkshopMocks.generated.swift in Sources */,
 				F106E88129D1F1C100E6AF82 /* NetworkPeopleDataSourceTest.swift in Sources */,
+				F156420A2A08F853003C24CD /* Mocks.generated.swift in Sources */,
 				F106E87529D1CE0A00E6AF82 /* PeopleListViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -799,20 +799,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F106E87129D1C84B00E6AF82 /* XCRemoteSwiftPackageReference "mockingbird" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/birdrides/mockingbird";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.0;
-			};
-		};
 		F106E88229D1F41A00E6AF82 /* XCRemoteSwiftPackageReference "Mocker" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/WeTransfer/Mocker";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 3.0.0;
+			};
+		};
+		F15642052A08F6DA003C24CD /* XCRemoteSwiftPackageReference "Cuckoo" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Brightify/Cuckoo.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.1;
 			};
 		};
 		F1AB3F7229473CE400502E2B /* XCRemoteSwiftPackageReference "Fakery" */ = {
@@ -826,15 +826,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F106E87229D1C84B00E6AF82 /* Mockingbird */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F106E87129D1C84B00E6AF82 /* XCRemoteSwiftPackageReference "mockingbird" */;
-			productName = Mockingbird;
-		};
 		F106E88329D1F41A00E6AF82 /* Mocker */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F106E88229D1F41A00E6AF82 /* XCRemoteSwiftPackageReference "Mocker" */;
 			productName = Mocker;
+		};
+		F15642062A08F6DA003C24CD /* Cuckoo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F15642052A08F6DA003C24CD /* XCRemoteSwiftPackageReference "Cuckoo" */;
+			productName = Cuckoo;
 		};
 		F1AB3F7329473CE400502E2B /* Fakery */ = {
 			isa = XCSwiftPackageProductDependency;
