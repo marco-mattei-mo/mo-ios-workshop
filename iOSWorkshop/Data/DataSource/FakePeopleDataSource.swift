@@ -4,7 +4,12 @@ struct FakePeopleDataSource: PeopleDataSource {
     let faker = Faker()
     
     func findPeopleList() async throws -> [PeopleDTO] {
-        //TODO: Part 2 - Generate and return a list of fake data
+        // Part 2 - Generate and return a list of fake data
+        var peopleList: [PeopleDTO] = []
+        for _ in 1...Int.random(in: 1..<50) {
+            peopleList.append(generatePeople())
+        }
+        return peopleList
     }
     
     private func generatePeople() -> PeopleDTO {
