@@ -11,6 +11,7 @@ class NetworkPeopleDataSource: PeopleDataSource {
          Use URLSession to perform a data request. Then use JSONDecoder() to decode the data into a "PeopleListResultDTO".
          Throw the correct domain error according the the actual error
          */
+        /*
         do {
             let (data, _) = //TODO: Perform data request
             let peopleListResult = //TODO: Decode the data
@@ -20,7 +21,8 @@ class NetworkPeopleDataSource: PeopleDataSource {
         } catch {
             //TODO: Throw an error
         }
-
+         */
+        return []
     }
         
 }
